@@ -9,6 +9,8 @@
   height: 600px;
   background-color: #fff;
   margin-top: 42px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
 }
 .senders {
   width: 30%;
@@ -17,17 +19,19 @@
   border-right: 1px solid #f5f6f9;
   box-sizing: border-box;
 }
-.senders__sender {
+.sender {
   position: relative;
   height: 100px;
   cursor: pointer;
 }
-.senders__avatar {
+.sender__avatar {
   position: absolute;
+  width: 50px;
+  height: 50px;
   top: 20px;
   left: 20px;
 }
-.senders__name {
+.sender__name {
   position: absolute;
   font-family: "Exo 2", sans-serif;
   font-weight: 500;
@@ -36,7 +40,7 @@
   font-size: 16px;
   color: #01134e;
 }
-.senders__name--online::after {
+.sender__name--online::after {
   content: "";
   padding: 3px;
   position: absolute;
@@ -45,19 +49,19 @@
   right: -9px;
   top: -3px;
 }
-.senders__mute {
+.sender__mute {
   position: absolute;
   top: 30px;
   left: 200px;
 }
-.senders__time {
+.sender__time {
   position: absolute;
   right: 14px;
   top: 14px;
   color: #9ba0ad;
   font-size: 12px;
 }
-.senders__message {
+.sender__message {
   position: absolute;
   top: 50px;
   left: 80px;
@@ -65,8 +69,9 @@
   font-size: 14px;
   opacity: 0.43;
 }
-.senders__sender--active {
-  box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+.sender--active {
+  box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2),
+    0px -5px 5px rgba(224, 224, 224, 0.15);
 }
 .messages {
   width: 70%;
@@ -76,29 +81,112 @@
   justify-content: space-between;
   flex-direction: column;
 }
-.messages__search {
+.search {
   display: flex;
   justify-content: flex-start;
   background-color: #fff;
   height: 47px;
   border-bottom: 1px solid #f5f6f9;
 }
-.messages__image {
+.search__image {
   margin-right: 22px;
   margin-left: 18px;
   cursor: pointer;
 }
-.messages__find {
+.search__find {
   border: none;
   outline: none;
   font-size: 14px;
   width: 100%;
 }
-.messages__find::placeholder {
+.search__find::placeholder {
   opacity: 0.2;
   color: #252f48;
 }
-.messages__input {
+.sms {
+  display: flex;
+  position: relative;
+  width: 300px;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+}
+.messages__mails {
+  display: flex;
+  flex-direction: column;
+  height: 492px;
+  justify-content: flex-end;
+  overflow-y: scroll;
+  margin: 6px;
+}
+.messages__mails::-webkit-scrollbar {
+  width: 8px;
+  background: #f5f6f7;
+  mix-blend-mode: normal;
+  opacity: 0.05;
+  border-radius: 4px;
+  margin: 6px;
+}
+.messages__mails::-webkit-scrollbar-thumb {
+  background-color: #dee4f1;
+  border-radius: 4px;
+}
+.inbox,
+.outbox {
+  margin-bottom: 11px;
+  margin-top: 11px;
+}
+.inbox {
+  display: flex;
+  align-items: flex-end;
+}
+.inbox__sms::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  border: 7px solid transparent;
+  border-right: 7px solid #f7f9fc;
+  border-bottom: 7px solid #f7f9fc;
+}
+.outbox {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 46px;
+}
+.outbox__sms::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: 0px;
+  border: 7px solid transparent;
+  border-bottom: 7px solid #f7f9fc;
+  border-left: 7px solid #f7f9fc;
+}
+.inbox__avatar {
+  margin-left: 21px;
+  margin-right: 11px;
+  width: 36px;
+  height: 36px;
+}
+.sms__text {
+  padding: 12px 23px 13px 14px;
+  color: #222428;
+  font-size: 14px;
+  line-height: 20px;
+  width: 222px;
+}
+.sms__time {
+  position: absolute;
+  right: 3%;
+  color: #9ba0ad;
+  font-size: 12px;
+  padding-bottom: 13px;
+  bottom: 0%;
+}
+.mails {
+  min-height: 100px;
+}
+.send {
   display: flex;
   align-items: center;
   height: 61px;
@@ -106,21 +194,21 @@
   background-color: #fff;
   box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
 }
-.messages__type {
+.send__type {
   padding-left: 30px;
   border: none;
   outline: none;
   width: 80%;
   font-size: 14px;
 }
-.messages__type::placeholder {
+.send__type::placeholder {
   opacity: 0.2;
   color: #252f48;
 }
-.messages__icon {
+.send__icon {
   margin-right: 25px;
 }
-.messages__icon--active {
+.send__icon--active {
   padding: 3px 7px;
   box-shadow: 0px 0px 15px rgba(153, 163, 174, 0.259256);
   border-radius: 7px;

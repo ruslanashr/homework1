@@ -30,6 +30,8 @@ a {
 }
 .profile__avatar {
   margin-right: 9px;
+  width: 22px;
+  height: 22px;
 }
 .profile__name {
   margin-right: 8px;
