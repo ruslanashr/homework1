@@ -1,0 +1,127 @@
+.content {
+  height: 92%;
+  background-color: #f9fafc;
+  display: flex;
+  justify-content: center;
+}
+.window {
+  width: 90%;
+  height: 600px;
+  background-color: #fff;
+  margin-top: 42px;
+}
+.senders {
+  width: 30%;
+  background-color: #fff;
+  float: left;
+  border-right: 1px solid #f5f6f9;
+  box-sizing: border-box;
+}
+.senders__sender {
+  position: relative;
+  height: 100px;
+  cursor: pointer;
+}
+.senders__avatar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.senders__name {
+  position: absolute;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  top: 25px;
+  left: 80px;
+  font-size: 16px;
+  color: #01134e;
+}
+.senders__name--online::after {
+  content: "";
+  padding: 3px;
+  position: absolute;
+  background-color: #0ad69c;
+  border-radius: 50%;
+  right: -9px;
+  top: -3px;
+}
+.senders__mute {
+  position: absolute;
+  top: 30px;
+  left: 200px;
+}
+.senders__time {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  color: #9ba0ad;
+  font-size: 12px;
+}
+.senders__message {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  color: #252f48;
+  font-size: 14px;
+  opacity: 0.43;
+}
+.senders__sender--active {
+  box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
+}
+.messages {
+  width: 70%;
+  float: right;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.messages__search {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+  height: 47px;
+  border-bottom: 1px solid #f5f6f9;
+}
+.messages__image {
+  margin-right: 22px;
+  margin-left: 18px;
+  cursor: pointer;
+}
+.messages__find {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+.messages__find::placeholder {
+  opacity: 0.2;
+  color: #252f48;
+}
+.messages__input {
+  display: flex;
+  align-items: center;
+  height: 61px;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.146541);
+}
+.messages__type {
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  width: 80%;
+  font-size: 14px;
+}
+.messages__type::placeholder {
+  opacity: 0.2;
+  color: #252f48;
+}
+.messages__icon {
+  margin-right: 25px;
+}
+.messages__icon--active {
+  padding: 3px 7px;
+  box-shadow: 0px 0px 15px rgba(153, 163, 174, 0.259256);
+  border-radius: 7px;
+}
