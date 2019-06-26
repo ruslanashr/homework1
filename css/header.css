@@ -2,7 +2,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.header {
+
+p {
+  text-align: center;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -11,6 +16,7 @@ a {
   font-weight: normal;
   color: #252f48;
 }
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -22,6 +28,7 @@ a {
 .breadcrumb__separator + .breadcrumb__item {
   margin-left: 12px;
 }
+
 .profile {
   display: flex;
   align-items: center;
@@ -36,3 +43,5 @@ a {
 .profile__name {
   margin-right: 8px;
 }
+
+/*# sourceMappingURL=header.css.map */

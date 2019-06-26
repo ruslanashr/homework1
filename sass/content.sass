@@ -1,0 +1,211 @@
+=justify($property)
+  display: flex
+  justify-content: $property
+
+.content
+  height: 92%
+  background-color: #f9fafc
+  display: flex
+  justify-content: center
+
+.window
+  width: 90%
+  height: 600px
+  background-color: #fff
+  margin-top: 42px
+  border-radius: 4px
+  box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06)
+
+.senders
+  width: 25%
+  background-color: #fff
+  float: left
+  border-right: 1px solid #f5f6f9
+  box-sizing: border-box
+  @media screen and (max-width: 1065px)
+    width: 40%
+
+.sender
+  position: relative
+  padding: 20px
+  box-sizing: border-box
+  height: 100px
+  cursor: pointer
+
+  &__avatar
+    width: 50px
+    height: 50px
+
+  &__name
+    position: absolute
+    font-family: "Exo 2", sans-serif
+    font-weight: 500
+    top: 25px
+    left: 80px
+    font-size: 16px
+    color: #01134e
+
+  &__name--online::after
+    content: ""
+    padding: 3px
+    position: absolute
+    background-color: #0ad69c
+    border-radius: 50%
+    right: -9px
+    top: -3px
+
+  &__mute
+    position: absolute
+    top: 30px
+    left: 200px
+
+  &__time
+    position: absolute
+    right: 14px
+    top: 14px
+    color: #9ba0ad
+    font-size: 12px
+
+  &__message
+    position: absolute
+    top: 50px
+    left: 80px
+    color: #252f48
+    font-size: 14px
+    opacity: 0.43
+
+  &--active
+    box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15)
+
+.messages
+  width: 75%
+  float: right
+  height: 100%
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  @media screen and (max-width: 1065px)
+    width: 60%
+
+.search
+  +justify(flex-start)
+  background-color: #fff
+  height: 47px
+  border-bottom: 1px solid #f5f6f9
+
+  &__image
+    margin-right: 22px
+    margin-left: 18px
+    cursor: pointer
+
+  &__find
+    border: none
+    outline: none
+    font-size: 14px
+    width: 100%
+    &::placeholder
+      opacity: 0.2
+      color: #252f48
+
+.sms
+  display: flex
+  position: relative
+  width: 300px
+  background-color: #f7f9fc
+  border-radius: 5px
+
+  &__text
+    padding: 12px 23px 13px 14px
+    color: #222428
+    font-size: 14px
+    line-height: 20px
+    width: 222px
+
+  &__time
+    position: absolute
+    right: 3%
+    color: #9ba0ad
+    font-size: 12px
+    padding-bottom: 13px
+    bottom: 0%  
+
+.messages__mails
+  +justify(flex-end)
+  flex-direction: column
+  height: 492px
+  overflow-y: scroll
+  margin: 6px
+  &::-webkit-scrollbar
+    width: 8px
+    background: #f5f6f7
+    mix-blend-mode: normal
+    border-radius: 4px
+    margin: 6px
+  &::-webkit-scrollbar-thumb
+    background-color: #dee4f1
+    border-radius: 4px
+
+.inbox, .outbox
+  margin-bottom: 11px
+  margin-top: 11px
+
+.inbox
+  display: flex
+  align-items: flex-end
+
+  &__sms::before
+    content: ""
+    position: absolute
+    left: -10px
+    bottom: 0px
+    border: 7px solid transparent
+    border-right: 7px solid #f7f9fc
+    border-bottom: 7px solid #f7f9fc
+
+  &__avatar
+    margin-left: 21px
+    margin-right: 11px
+    width: 36px
+    height: 36px
+
+.outbox
+  +justify(flex-end)
+  margin-right: 46px
+
+  &__sms::after
+    content: ""
+    position: absolute
+    right: -10px
+    bottom: 0px
+    border: 7px solid transparent
+    border-bottom: 7px solid #f7f9fc
+    border-left: 7px solid #f7f9fc
+
+.mails
+  min-height: 100px
+
+.send
+  display: flex
+  align-items: center
+  height: 61px
+  bottom: 0
+  background-color: #fff
+  box-shadow: 0px 0px 20px rgba(153, 163, 174, 0.14654)
+
+  &__type
+    padding-left: 30px
+    border: none
+    outline: none
+    width: 80%
+    font-size: 14px
+    &::placeholder
+      opacity: 0.2
+      color: #252f48
+
+  &__icon
+    margin-right: 25px
+
+  &__icon--active
+    padding: 3px 7px
+    box-shadow: 0px 0px 15px rgba(153, 163, 174, 0.25926)
+    border-radius: 7px

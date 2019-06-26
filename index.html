@@ -14,7 +14,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="sidebar">
+    <nav class="sidebar">
       <div class="sidebar__logo">
         <a href="#"><img src="img/logo.svg" alt=""/></a>
       </div>
@@ -39,10 +39,10 @@
         <a href="#"><img src="img/messages.svg" alt=""/></a>
       </div>
       <!-- /.sidebar__icon--active -->
-    </div>
+    </nav>
     <!-- /.sidebar -->
-    <div id="main">
-      <div class="header">
+    <main>
+      <header>
         <div class="breadcrumb">
           <a class="breadcrumb__item" href="#">Home</a>
           <img class="breadcrumb__separator" src="img/Vector.svg" alt="" />
@@ -55,53 +55,53 @@
           <img class="profile__expand" src="img/Shape.svg" alt="" />
         </div>
         <!-- /.profile -->
-      </div>
+      </header>
       <!-- /.header -->
       <div class="content">
         <div class="window">
           <div class="senders">
-            <div class="senders__sender sender">
-              <img class="sender__avatar" src="img/MH@2.png" alt="" />
+            <section class="senders__sender sender">
+              <img class="sender__avatar sender__avatar--online" src="img/MH@2.png" alt="" />
               <span class="sender__name sender__name--online">Miranda Hops</span>
               <img class="sender__mute" src="img/Group.svg" alt="" />
-              <span class="sender__time">9:32</span>
+              <time class="sender__time">9:32</time>
               <span class="sender__message">Excepteur sint occaecatar…</span>
-            </div>
+            </section>
             <!-- /.senders__sender sender-->
-            <div class="senders__sender sender">
+            <section class="senders__sender sender">
               <img class="sender__avatar" src="img/BC@2.png" alt="" />
               <span class="sender__name">Barry Callebaut</span>
-              <span class="sender__time">22:01</span>
+              <time class="sender__time">22:01</time>
               <span class="sender__message">Nemo enim ipsam volupta…</span>
-            </div>
+            </section>
             <!-- /.senders__sender sender-->
-            <div class="senders__sender sender sender--active">
-              <img class="sender__avatar" src="img/SD1@2.png" alt="" />
+            <section class="senders__sender sender sender--active">
+              <img class="sender__avatar sender__avatar--online" src="img/SD1@2.png" alt="" />
               <span class="sender__name sender__name--online">Stacey Dosh</span>
-              <span class="sender__time">19:15</span>
+              <time class="sender__time">19:15</time>
               <span class="sender__message">Ut enim ad minima veniam…</span>
-            </div>
+            </section>
             <!-- /.senders__sender .senders__sender--active-->
-            <div class="senders__sender sender">
+            <section class="senders__sender sender">
               <img class="sender__avatar" src="img/MK@2.png" alt="" />
               <span class="sender__name">Michael Kors</span>
-              <span class="sender__time">13:49</span>
+              <time class="sender__time">13:49</time>
               <span class="sender__message">To take a trivial example…</span>
-            </div>
+            </section>
             <!-- /.senders__sender sender-->
-            <div class="senders__sender sender">
-              <img class="sender__avatar" src="img/JS@2.png" alt="" />
+            <section class="senders__sender sender">
+              <img class="sender__avatar sender__avatar--online" src="img/JS@2.png" alt="" />
               <span class="sender__name sender__name--online">Johny Cash</span>
-              <span class="sender__time">10:25</span>
+              <time class="sender__time">10:25</time>
               <span class="sender__message">Great explorer of the truth…</span>
-            </div>
+            </section>
             <!-- /.senders__sender sender-->
-            <div class="senders__sender sender">
+            <section class="senders__sender sender">
               <img class="sender__avatar" src="img/SD@2.png" alt="" />
               <span class="sender__name">Stacey Dosh</span>
-              <span class="sender__time">08:53</span>
+              <time class="sender__time">08:53</time>
               <span class="sender__message">Ut enim ad minima veniam…</span>
-            </div>
+            </section>
             <!-- /.senders__sender sender-->
           </div>
           <!-- /.senders -->
@@ -113,74 +113,74 @@
             <!-- /.messages__search .search-->
             <div class="messages__mails">
               <div class="mails">
-                <div class="mails__inbox inbox">
+                <section class="inbox">
                   <img class="inbox__avatar" src="img/SD1@2.png" alt="" />
                   <div class="inbox__sms sms">
                     <span class="sms__text">On the other hand, we denounce with righteous indignation!</span>
-                    <span class="sms__time">01:14</span>
+                    <time class="sms__time">01:14</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.messages__mails inbox -->
-                <div class="mails__outbox outbox">
+                </section>
+                <!-- /.inbox -->
+                <section class="outbox">
                   <div class="outbox__sms sms">
                     <span class="sms__text">Which is the same as saying?</span>
-                    <span class="sms__time">01:38</span>
+                    <time class="sms__time">01:38</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.message__mails outbox -->
-                <div class="mails__inbox inbox">
+                </section>
+                <!-- /.outbox -->
+                <section class="inbox">
                   <img class="inbox__avatar" src="img/SD1@2.png" alt="" />
                   <div class="inbox__sms sms">
                     <span class="sms__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
-                    <span class="sms__time">01:14</span>
+                    <time class="sms__time">01:14</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.messages__mails inbox -->
-                <div class="mails__outbox outbox">
+                </section>
+                <!-- /.inbox -->
+                <section class="outbox">
                   <div class="outbox__sms sms">
                     <span class="sms__text">To take a trivial example, which of us ever undertakes)</span>
-                    <span class="sms__time">01:38</span>
+                    <time class="sms__time">01:38</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.message__mails outbox -->
-                <div class="mails__inbox inbox">
+                </section>
+                <!-- /.outbox -->
+                <section class="inbox">
                   <img class="inbox__avatar" src="img/SD1@2.png" alt="" />
                   <div class="inbox__sms sms">
                     <span class="sms__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
-                    <span class="sms__time">01:14</span>
+                    <time class="sms__time">01:14</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.messages__mails inbox -->
-                <div class="mails__outbox outbox">
+                </section>
+                <!-- /.inbox -->
+                <section class="outbox">
                   <div class="outbox__sms sms">
                     <span class="sms__text">To take a trivial example, which of us ever undertakes)</span>
-                    <span class="sms__time">01:38</span>
+                    <time class="sms__time">01:38</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.message__mails outbox -->
-                <div class="mails__inbox inbox">
+                </section>
+                <!-- /.outbox -->
+                <section class="inbox">
                   <img class="inbox__avatar" src="img/SD1@2.png" alt="" />
                   <div class="inbox__sms sms">
                     <span class="sms__text">But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures</span>
-                    <span class="sms__time">01:14</span>
+                    <time class="sms__time">01:14</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.messages__mails inbox -->
-                <div class="mails__outbox outbox">
+                </section>
+                <!-- /.inbox -->
+                <section class="outbox">
                   <div class="outbox__sms sms">
                     <span class="sms__text">To take a trivial example, which of us ever undertakes)</span>
-                    <span class="sms__time">01:38</span>
+                    <time class="sms__time">01:38</time>
                   </div>
                   <!-- /.inbox__sms -->
-                </div>
-                <!-- /.message__mails outbox -->
+                </section>
+                <!-- /.outbox -->
               </div>
             </div>
             <!-- /.messages__mails -->
@@ -197,7 +197,7 @@
         <!-- /.window -->
       </div>
       <!-- /.content -->
-    </div>
+    </main>
     <!-- /#main -->
   </body>
 </html>
