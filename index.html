@@ -11,38 +11,48 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/mixins.css">
     <title>Document</title>
   </head>
   <body>
-    <nav class="sidebar">
-      <div class="sidebar__logo">
-        <a href="#"><img src="img/logo.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__logo -->
-      <div class="sidebar__icon sidebar__icon--notification">
-        <a href="#"><img src="img/icon-3.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__icon -->
-      <div class="sidebar__icon">
-        <a href="#"><img src="img/my_profile.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__icon -->
-      <div class="sidebar__icon">
-        <a href="#"><img src="img/handyman-tools.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__icon -->
-      <div class="sidebar__icon">
-        <a href="#"><img src="img/team-2.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__icon -->
-      <div class="sidebar__icon sidebar__icon--active">
-        <a href="#"><img src="img/messages.svg" alt=""/></a>
-      </div>
-      <!-- /.sidebar__icon--active -->
-    </nav>
+    <div id="menuToggle" class="sidebar">
+      <nav>
+        <div class="sidebar__logo">
+            <a href="#"><img src="img/logo.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__logo -->
+        <div class="sidebar__icon sidebar__icon--notification">
+            <a href="#"><img src="img/icon-3.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__icon -->
+        <div class="sidebar__icon">
+            <a href="#"><img src="img/my_profile.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__icon -->
+        <div class="sidebar__icon">
+            <a href="#"><img src="img/handyman-tools.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__icon -->
+        <div class="sidebar__icon">
+            <a href="#"><img src="img/team-2.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__icon -->
+        <div class="sidebar__icon sidebar__icon--active">
+            <a href="#"><img src="img/messages.svg" alt=""/></a>
+        </div>
+        <!-- /.sidebar__icon--active -->
+      </nav>
+    </div>
     <!-- /.sidebar -->
     <main>
       <header>
+        <div class="burger">
+          <input type="checkbox" onclick="if(this.checked){showMenu()} else {hideMenu()}"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- /.burger -->
         <div class="breadcrumb">
           <a class="breadcrumb__item" href="#">Home</a>
           <img class="breadcrumb__separator" src="img/Vector.svg" alt="" />
@@ -60,8 +70,8 @@
       <div class="content">
         <div class="window">
           <div class="senders">
-            <section class="senders__sender sender">
-              <img class="sender__avatar sender__avatar--online" src="img/MH@2.png" alt="" />
+            <section class="senders__sender senders__sender--online sender">
+              <img class="sender__avatar" src="img/MH@2.png" alt="" />
               <span class="sender__name sender__name--online">Miranda Hops</span>
               <img class="sender__mute" src="img/Group.svg" alt="" />
               <time class="sender__time">9:32</time>
@@ -75,8 +85,8 @@
               <span class="sender__message">Nemo enim ipsam volupta…</span>
             </section>
             <!-- /.senders__sender sender-->
-            <section class="senders__sender sender sender--active">
-              <img class="sender__avatar sender__avatar--online" src="img/SD1@2.png" alt="" />
+            <section class="senders__sender sender senders__sender--online sender--active">
+              <img class="sender__avatar" src="img/SD1@2.png" alt="" />
               <span class="sender__name sender__name--online">Stacey Dosh</span>
               <time class="sender__time">19:15</time>
               <span class="sender__message">Ut enim ad minima veniam…</span>
@@ -89,8 +99,8 @@
               <span class="sender__message">To take a trivial example…</span>
             </section>
             <!-- /.senders__sender sender-->
-            <section class="senders__sender sender">
-              <img class="sender__avatar sender__avatar--online" src="img/JS@2.png" alt="" />
+            <section class="senders__sender senders__sender--online sender">
+              <img class="sender__avatar" src="img/JS@2.png" alt="" />
               <span class="sender__name sender__name--online">Johny Cash</span>
               <time class="sender__time">10:25</time>
               <span class="sender__message">Great explorer of the truth…</span>
@@ -199,5 +209,6 @@
       <!-- /.content -->
     </main>
     <!-- /#main -->
+    <script src="js/mobileMenu.js"></script>
   </body>
 </html>

@@ -1,29 +1,54 @@
 .content {
   height: 92%;
-  background-color: #f9fafc;
   display: flex;
   justify-content: center;
 }
 
 .window {
+  display: flex;
   width: 90%;
   height: 600px;
   background-color: #fff;
   margin-top: 42px;
+  margin-bottom: 30px;
   border-radius: 4px;
   box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06);
+}
+@media screen and (max-width: 400px) {
+  .window {
+    width: 100%;
+  }
 }
 
 .senders {
   width: 25%;
   background-color: #fff;
-  float: left;
   border-right: 1px solid #f5f6f9;
   box-sizing: border-box;
 }
 @media screen and (max-width: 1065px) {
   .senders {
     width: 40%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .senders {
+    width: 90px;
+  }
+  .senders__sender--online::after {
+    content: "";
+    padding: 5px;
+    position: absolute;
+    background-color: #0ad69c;
+    border-radius: 50%;
+    right: 20px;
+    top: 65px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .senders {
+    width: 68px;
   }
 }
 
@@ -33,6 +58,18 @@
   box-sizing: border-box;
   height: 100px;
   cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  .sender {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 20px 25px 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sender {
+    padding: 25px 9px 25px 9px;
+  }
 }
 .sender__avatar {
   width: 50px;
@@ -46,6 +83,11 @@
   left: 80px;
   font-size: 16px;
   color: #01134e;
+}
+@media screen and (max-width: 720px) {
+  .sender__name {
+    display: none;
+  }
 }
 .sender__name--online::after {
   content: "";
@@ -61,12 +103,22 @@
   top: 30px;
   left: 200px;
 }
+@media screen and (max-width: 720px) {
+  .sender__mute {
+    position: unset;
+  }
+}
 .sender__time {
   position: absolute;
   right: 14px;
   top: 14px;
   color: #9ba0ad;
   font-size: 12px;
+}
+@media screen and (max-width: 720px) {
+  .sender__time {
+    display: none;
+  }
 }
 .sender__message {
   position: absolute;
@@ -76,13 +128,18 @@
   font-size: 14px;
   opacity: 0.43;
 }
+@media screen and (max-width: 720px) {
+  .sender__message {
+    display: none;
+  }
+}
 .sender--active {
+  background: #F7F9FC;
   box-shadow: 0px 5px 5px rgba(190, 200, 212, 0.2), 0px -5px 5px rgba(224, 224, 224, 0.15);
 }
 
 .messages {
   width: 75%;
-  float: right;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -91,6 +148,11 @@
 @media screen and (max-width: 1065px) {
   .messages {
     width: 60%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .messages {
+    width: calc(100% - 90px);
   }
 }
 
@@ -120,16 +182,17 @@
 .sms {
   display: flex;
   position: relative;
-  width: 300px;
+  max-width: 300px;
   background-color: #f7f9fc;
   border-radius: 5px;
 }
 .sms__text {
-  padding: 12px 23px 13px 14px;
+  padding: 12px 40px 13px 14px;
   color: #222428;
   font-size: 14px;
   line-height: 20px;
-  width: 222px;
+  max-width: 222px;
+  word-break: break-word;
 }
 .sms__time {
   position: absolute;
@@ -169,6 +232,11 @@
   display: flex;
   align-items: flex-end;
 }
+@media screen and (max-width: 530px) {
+  .inbox {
+    margin-left: 25px;
+  }
+}
 .inbox__sms::before {
   content: "";
   position: absolute;
@@ -183,6 +251,11 @@
   margin-right: 11px;
   width: 36px;
   height: 36px;
+}
+@media screen and (max-width: 530px) {
+  .inbox__avatar {
+    display: none;
+  }
 }
 
 .outbox {
@@ -223,8 +296,18 @@
   opacity: 0.2;
   color: #252f48;
 }
+@media screen and (max-width: 400px) {
+  .send__type {
+    padding-left: 15px;
+  }
+}
 .send__icon {
   margin-right: 25px;
+}
+@media screen and (max-width: 400px) {
+  .send__icon {
+    margin-right: 7px;
+  }
 }
 .send__icon--active {
   padding: 3px 7px;

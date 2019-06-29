@@ -1,23 +1,37 @@
-html, body {
+html {
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-.sidebar {
+body {
+  display: flex;
+  background-color: #f9fafc;
+  min-height: 100%;
+}
+
+nav {
+  width: 100%;
   background-color: #01134e;
-  width: 5%;
   height: 100%;
-  float: left;
+}
+
+.sidebar {
+  width: 5%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+@media screen and (max-width: 810px) {
+  .sidebar {
+    width: 0;
+  }
+}
 .sidebar__logo {
   margin-top: 20px;
   margin-bottom: 23px;
+  text-align: center;
 }
-
 .sidebar__icon {
   display: flex;
   margin-top: 45%;
@@ -27,7 +41,6 @@ html, body {
   justify-content: center;
   position: relative;
 }
-
 .sidebar__icon--notification::after {
   content: "1";
   padding: 3px 6px;
@@ -40,10 +53,33 @@ html, body {
   right: 20px;
   top: 3px;
 }
-
 .sidebar__icon--active {
   border-left: 4px solid #0ad69c;
   box-sizing: border-box;
+}
+
+#menuToggle {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 810px) {
+  #menuToggle nav {
+    position: absolute;
+    width: 80px;
+    padding-top: 160px;
+    margin: -100px 0 0 0;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-50%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menuToggle.showMenu nav {
+    transform: translateX(50%);
+  }
+  #menuToggle.hideMenu nav {
+    transform: translateX(-50%);
+  }
 }
 
 /*# sourceMappingURL=sidebar.css.map */

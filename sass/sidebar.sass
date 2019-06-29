@@ -1,43 +1,75 @@
 $main-font: "Roboto", sans-serif
+@import "./mixins"
 
-html, body
+html
   height: 100%
   font-family: $main-font
 
-.sidebar
+body 
+  display: flex
+  background-color: #f9fafc
+  min-height: 100%
+
+nav
+  width: 100%
   background-color: #01134e
-  width: 5%
   height: 100%
-  float: left
+
+.sidebar
+  width: 5%
+  min-height: 100%
   display: flex
   flex-direction: column
   align-items: center
+  @include tablet
+    width: 0
+    // display: none
+  &__logo
+    margin-top: 20px
+    margin-bottom: 23px
+    text-align: center
+  &__icon
+    display: flex
+    margin-top: 45%
+    width: 100%
+    height: 44px
+    align-items: center
+    justify-content: center
+    position: relative
+  &__icon--notification::after
+    content: "1"
+    padding: 3px 6px
+    font-size: 11px
+    color: #fff
+    font-weight: bold
+    position: absolute
+    background-color: #2a74db
+    border-radius: 50%
+    right: 20px
+    top: 3px
+  &__icon--active
+    border-left: 4px solid #0ad69c
+    box-sizing: border-box
 
-.sidebar__logo
-  margin-top: 20px
-  margin-bottom: 23px
-
-.sidebar__icon
-  display: flex
-  margin-top: 45%
-  width: 100%
-  height: 44px
-  align-items: center
-  justify-content: center
+#menuToggle
   position: relative
+  z-index: 1
+  @include tablet
+    nav
+      position: absolute
+      width: 80px
+      padding-top: 160px
+      margin: -100px 0 0 0
+      list-style-type: none
+      -webkit-font-smoothing: antialiased
+      transform-origin: 0% 0%
+      transform: translate(-50%, 0)
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+    &.showMenu 
+      nav
+        transform: translateX(50%)
+    &.hideMenu 
+      nav
+        transform: translateX(-50%)
 
-.sidebar__icon--notification::after
-  content: "1"
-  padding: 3px 6px
-  font-size: 11px
-  color: #fff
-  font-weight: bold
-  position: absolute
-  background-color: #2a74db
-  border-radius: 50%
-  right: 20px
-  top: 3px
 
-.sidebar__icon--active
-  border-left: 4px solid #0ad69c
-  box-sizing: border-box
