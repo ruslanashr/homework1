@@ -3,3 +3,7 @@ img/.DS_Store
 node_modules/
 dist/
 *.pug
+css/
+js/
+img/
+sass/
