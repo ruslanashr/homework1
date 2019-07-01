@@ -5,6 +5,8 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
+const image = require('gulp-image');
+const uglify = require('gulp-uglify');
 
 
 function style(){
@@ -25,15 +27,23 @@ function template(){
 }
 
 function img(){
-    gulp.src('/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+    return gulp.src('./img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'));
+}
+
+function js(){
+    return gulp.src('./js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+
 }
 
 async function build(){
     await style();
     await template();
     await img();
+    await js();
 }
 
 function watch(){
@@ -46,10 +56,12 @@ function watch(){
     gulp.watch('./sass/*.sass', style);
     gulp.watch('./index.pug', template);
     gulp.watch('./img/*', img);
+    gulp.watch('./js/*', js);
 }
 
 exports.style = style;
 exports.template = template;
 exports.build = build;
 exports.watch = watch;
+exports.js = js;
 
