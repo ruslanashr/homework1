@@ -16,7 +16,7 @@ function style(){
     .pipe(browserSync.stream());
 }
 function template(){
-    return gulp.src('./*.pug')
+    return gulp.src('./index.pug')
     .pipe(pug({
         pretty: true
     }))
@@ -44,7 +44,7 @@ function watch(){
         }
     });
     gulp.watch('./sass/*.sass', style);
-    gulp.watch('./*.pug', template);
+    gulp.watch('./index.pug', template);
     gulp.watch('./img/*', img);
 }
 
