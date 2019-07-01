@@ -1,0 +1,28 @@
+#menuToggle.sidebar
+  nav
+    - 
+        const icons = [
+            {"type": "logo", "link": "#", "source": "../img/logo.svg", "notification": false, "active":false}, 
+            {"type": "icon", "link": "#", "source": "../img/icon-3.svg", "notification": true, "active":false},
+            {"type": "icon", "link": "#", "source": "../img/my_profile.svg", "notification": false, "active":false},
+            {"type": "icon", "link": "#", "source": "../img/handyman-tools.svg", "notification": false, "active":false}, 
+            {"type": "icon", "link": "#", "source": "../img/team-2.svg", "notification": false, "active":false}, 
+            {"type": "icon", "link": "#", "source": "../img/messages.svg", "notification": false, "active":true}
+        ]
+    each icon in icons
+        if icon.type == "logo"
+            .sidebar__logo
+                a(href = icon.link)
+                    img(src = icon.source, alt="")
+        else if icon.notification 
+            .sidebar__icon.sidebar__icon--notification
+                a(href = icon.link)
+                    img(src = icon.source, alt="")
+        else if icon.active
+            .sidebar__icon.sidebar__icon--active
+                a(href = icon.link)
+                    img(src = icon.source, alt="")
+        else
+            .sidebar__icon
+                a(href = icon.link)
+                    img(src = icon.source, alt="")
