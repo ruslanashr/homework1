@@ -2,3 +2,8 @@
 img/.DS_Store
 node_modules/
 dist/
+base.pug
+sidebar.pug
+header.pug
+mixins.pug
+index.pug
