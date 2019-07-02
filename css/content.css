@@ -135,7 +135,9 @@
           justify-content: flex-start;
   background-color: #fff;
   height: 47px;
-  border-bottom: 1px solid #f5f6f9; }
+  border-bottom: 1px solid #f5f6f9;
+  -webkit-box-align: center;
+          align-items: center; }
   .search__image {
     margin-right: 22px;
     margin-left: 18px;
